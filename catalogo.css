@@ -1,0 +1,51 @@
+header{
+    background:#03738C;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    overflow: auto;
+}
+body{
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    background: #f2f2f2;
+}
+.menu{
+    float: left;
+    padding:0px 20px 0px 20px;
+    list-style: none;
+    background: rgba(242, 242, 242, 0.1);
+    margin:0px 10px 5px 10px;
+
+}
+
+article{
+    width: 30%;
+    height: 0;
+    background: #ffffff;
+    border-radius: 10%;
+    padding-bottom: 30%;
+}
+
+
+.producto{
+    margin: 0 auto;
+    width: 80%;
+}
+.producto img{
+    
+    display: block;
+    height: 70%;
+    width: 80%;
+    background: #D9D9D9;
+}
+.grid-container{
+    display: grid;
+}
+.nombreProducto{
+    font-size: 100%;
+    grid-column: 1;
+    width: 50%;
+}
+.precio{
+    grid-column: 2;
+}
