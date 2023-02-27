@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-around;
     background: #03738C;
-    position: absolute;
+    
     bottom: 0;
     width: 100%;
 }
 body{
     margin: 0%;
     padding: 0%;
+    
     
 }
 h1{
@@ -24,13 +25,10 @@ p{
 .contacto{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-right: 100px;
+    justify-content: space-between;
     margin-bottom: 10px;
 }
-.direccion{
-    margin-left: 5%;
-}
+
 .info{
     margin-bottom: 20%;
 }
