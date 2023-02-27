@@ -4,35 +4,39 @@ body {
 }
 
 .topBar {
-  margin: 0;
-  padding: 0;
+  float: left;
   overflow: auto;
+  margin: 0;
+  padding: 5px;
   width: 100%;
   background-color: #037386;
-  float: left;
-}
-
-.logo{
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
+  
 }
 
 .topBarLinks {
-  font-size: 18px;
-  float: left;
   list-style: none;
-  text-align: center;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  padding-left: 2px;
+  padding-bottom: 5px;
 }
 
 .topBarLinks > li{
-  float: left;
-  padding-left: 20px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 0px;
+  background-color: rgba(242, 242, 242, 0.1);
 }
 
-.topBarLinks > a {
+a{
   text-decoration: none;
-  background-color: #f2f2f2f2;
+  color: black;
 }
 
+a:hover {
+  color: white;
+}
