@@ -22,7 +22,8 @@ p{
     margin-bottom:0;
     margin-top: 0;
 }
-.contacto{
+.Contacto{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,4 +32,7 @@ p{
 
 .info{
     margin-bottom: 20%;
+}
+.direccion{
+    margin-top: 10px;
 }
