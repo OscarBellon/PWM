@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="catalogo.css">
-    </head>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+         <link rel="stylesheet" type="text/css" href="catalogo.css">
+         <link rel="stylesheet" href="/catalogo/css/swiper-bundle.min.css">
+        </head>
     <body>
-        <header>
-            <ul>
-                <li class="menu">Inicio</li>
-                <li class="menu">Catalogo</li>
-                <li class="menu">Novedades</li>
-                <li class="menu">Contacto</li>
-            </ul>
+        <header w3-include-html="../header.html"> 
         </header>
         <main>
-            
-        </main>>
-    </body>
+
+            <div w3-include-html="carusel.html">
+            <script src="js/swiper-bundle.min.js"></script>
+            <script src="js/script.js"></script>
+            <script>w3.includeHTML(myCallback)
+
+            function myCallback(){
+                let script1 =document.createElement("script")
+                script1.setAttribute("src","/catalogo/js/script.js")
+                document.body.appendChild(script1)
+                let script2 =document.createElement("script")
+                script1.setAttribute("src","/catalogo/js/swiper-bundle.min.js")
+                document.body.appendChild(script2)
+            }
+            </script>
+        </main>
+        
+
+    <!-- JavaScript -->
+    
+       <!-- <footer w3-include-html="../footer.html"></footer>
+    --></body>
+    
+    
 </html>
