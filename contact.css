@@ -2,12 +2,17 @@ body{
   background-color: #f2f2f2;
 }
 
-h1 {
-  margin: 0;
+header{
+  top: 0;
 }
 
-titulo{
-  margin: 50px;
+.contactanos {
+  margin: 0;
+  padding: 0;
+  padding-top: 130px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
 }
 
 footer{
@@ -34,7 +39,7 @@ input{
   text-align: initial;
 }
 
-button{
+.boton{
   padding: 5px;
   padding-left: 50px;
   padding-right: 50px;
@@ -44,4 +49,8 @@ button{
   background-color: #24889e;
   border-color: #24889e;
   font-weight: bold;
+}
+
+.boton:hover{
+  background-color: white;
 }

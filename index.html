@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" type="text/css" href="/home.css">
     <title>ElectroDisuar</title>
     <meta charset="utf-8" />
   </head>
   <body>
     <header>
-      <!-- Header.html-->
+      <header w3-include-html="../header.html"> 
     </header>
     <main>
-      <div>
-        <img src="resources/placeholder.jpg" alt="Foto de la tienda" width="1920" height="500">
-        <h1>ElectroDisuar</h1>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+      <script>w3.includeHTML()</script>
+      <div class="presentacion">
+        <img src="resources/placeholder.jpg" alt="Foto de la tienda" width="1920" height="200">
+        <h1 class="titulo">ElectroDisuar</h1>
+        <p class="subtitulo">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
       </div>
-      <div>
+      <div class="galeria">
         <!-- Componente galería-->
       </div>
-      <div>
-        <h1>Novedades</h1>
-        <!-- Componente blog-->
+      <div class="novedades">
+        <h1 class="titulo3">Novedades</h1>
+        <div class="entradas">
+          <div class="entrada">
+            <img src="resources/placeholder.jpg" alt="Foto de la noticia" width="300" height="200" class="noticia">
+            <p class="tituloNoticia">titulo de la notica</p>
+          </div>
+          <div class="entrada">
+            <img src="resources/placeholder.jpg" alt="Foto de la noticia" width="300" height="200" class="noticia">
+            <p class="tituloNoticia">titulo de la notica</p>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
-     <!-- Footer.html --> 
+      <footer w3-include-html="../footer.html"></footer> 
     </footer>
   </body>
   <tail>
