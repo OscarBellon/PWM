@@ -22,7 +22,7 @@ body{
 h1{
     font-size: 110%;
 }
-p{
+.Contacto p, .direccion p, .info p{
     color:#F2F2F2;
     margin-left: 5px;
     font-size: 60%;
@@ -43,3 +43,4 @@ p{
 .direccion{
     margin-top: 10px;
 }
+
