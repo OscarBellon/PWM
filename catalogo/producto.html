@@ -4,13 +4,29 @@
         <script src="https://www.w3schools.com/lib/w3.js"></script>
          <link rel="stylesheet" type="text/css" href="catalogo.css">
          <link rel="stylesheet" href="/catalogo/css/swiper-bundle.min.css">
+         <link rel="stylesheet" href="producto.css">
         </head>
     <body>
         <header w3-include-html="../header.html"> 
         </header>
         <main>
 
-            <div w3-include-html="carusel.html">
+            <article class="productoPrincipal">
+                <div class="imagenProducto">
+                <img src="../IMAGEN.png" class="imPro"alt="producto"></div>
+                <h1>Nombre del producto</h1>
+                <div class="primeraFila">
+                <h2>Precio €</h2>
+                <div class="disponibilidad">Disponibilidad en tienda <div class="circulo"></div></div>
+                </div>
+                <h3>Descripción</h3>
+                <div class="descripcion">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, vitae tempore. Repudiandae nam dolorem qui? Expedita impedit, sint numquam est modi sapiente fugit. Magni vel voluptate quidem voluptatem velit reprehenderit.
+                </div>
+            </article>
+            <div class="scrollers">
+            <div w3-include-html="carusel.html"></div>
+            </div>
             <script src="js/swiper-bundle.min.js"></script>
             <script src="js/script.js"></script>
             <script>w3.includeHTML(myCallback)
@@ -29,8 +45,8 @@
 
     <!-- JavaScript -->
     
-       <!-- <footer w3-include-html="../footer.html"></footer>
-    --></body>
+    <footer w3-include-html="../footer.html"></footer>
+    </body>
     
     
 </html>

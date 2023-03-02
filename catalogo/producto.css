@@ -1,0 +1,66 @@
+.productoPrincipal{
+    background: white;
+    margin: auto;
+    border-radius: 15px;
+    height: auto;
+    width: 90%;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 10px;
+    padding-bottom: 0;
+    padding: auto;
+    
+}
+.scrollers{
+    background: #049DBF;
+    bottom: 0;
+    padding-bottom: 7.5rem;
+}
+body{
+    display: flex;
+}
+main{
+    text-align: center;
+}
+.imagenProducto{
+    
+    grid-column: 1;
+    grid-row: 1/5;
+    position: relative;
+    display: flex;
+    margin:  auto;
+    justify-content: center;
+    padding: 10px;
+    
+}
+article img {
+    display: absolute;
+    max-width: 80%;
+
+    margin: 0 auto;
+}
+article h1 {
+    grid-row: 1;
+    grid-column:2 / 3;
+    float: left;
+}
+.primeraFila{
+    grid-column: 2;
+    grid-row: 2;
+    display:block;
+    width: 100%;
+}
+article h2{
+    float: left;
+}
+article h3{
+    grid-row: 3;
+    grid-column: 2;
+}
+.descripcion{
+    grid-row: 4;
+    grid-column: 2;
+}
+.disponibilidad{
+    float: right;
+}
