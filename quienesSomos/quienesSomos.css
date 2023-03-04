@@ -3,6 +3,7 @@ body{
     margin: 0px;
 }
 #box{
+    float: left;
     background-color: #f2f2f2;
     margin-left: 5%;
     margin-right: 5%;
