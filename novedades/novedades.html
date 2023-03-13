@@ -2,10 +2,14 @@
 <html>
     <head>
         <title>Novedades</title>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
         <link href="novedades.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
+        <header w3-include-html="../header.html">
+
+        </header>
         <main>
             <article>
                 <header>Ofertas</header>
@@ -58,7 +62,7 @@
 
             <article>
                 <header>Destacado</header>
-                <div>
+                <div class="destacadoContainer">
                     <section class="destacadoSection">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnDjShQzzKVZTGjzUC9UkZCPAZP3GOZSLHw&usqp=CAU"/>
                         <header class="productName">Product Name</header>
@@ -80,5 +84,11 @@
                 </div>
             </article>
         </main>
+        <footer w3-include-html="../footer.html">
+
+        </footer>
+        <script>
+            w3.includeHTML();
+        </script>
     </body>
 </html>
