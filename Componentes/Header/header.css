@@ -24,27 +24,6 @@ body {
   height: 50%;
 }
 
-.contenedorLinks{
-  display: flex;
-  align-content: center;
-  justify-content: flex-end
-}
-
-.topBarLinks{
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style: none;
-  margin:auto;
-  padding-inline-start: 0;
-}
-
-.topBarLinks li{
-  padding: 10px;
-  padding-left: 15px;
-  margin: 0;
-}
-
 .topBarLinks a{
   transition: color 0.5s ease;
 }
@@ -53,19 +32,45 @@ body {
   text-decoration: none;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
-}
+}  
 
 .topBarLinks a:hover{
   color: lightcoral;
 }
 
-.marco2{
-  background-color: #03738C;
-  width: auto;
-  height: auto;
+@media only screen and (min-width:702px){
+
+  .topBarLinks{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    margin:auto;
+    padding-inline-start: 0;
+  }
+  
+  .topBarLinks li{
+    padding: 10px;
+    padding-left: 15px;
+    margin: 0;
+  }
+
+  .contenedorLinks{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end
+  }
+
+  .marco2{
+    background-color: #03738C;
+    width: auto;
+    height: auto;
+  }
+
 }
 
 @media only screen and (max-width: 702px){
+
   .contenedorLinks{
     display: none;
   }
