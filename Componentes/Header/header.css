@@ -9,17 +9,17 @@ body {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .marco{
   background-color: #03738C;
-  width: 20%;
-  height: 20%;
+  width: auto;
+  height: auto;
   border-radius: 5px;
 }
 
 .logo{
-  object-fit: contain;
   width: 50%;
   height: 50%;
 }
@@ -34,22 +34,32 @@ body {
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: 10px;
   list-style: none;
   margin:auto;
+  padding-inline-start: 0;
 }
 
-li{
+.topBarLinks li{
   padding: 10px;
+  margin: 0;
 }
 
-a:link, a:visited, a:active {
+.topBarLinks a{
+  transition: color 0.5s ease;
+}
+
+.topBarLinks a:link, a:visited, a:active {
   text-decoration: none;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.Acceder{
-  background-color: #03738C;
+.topBarLinks a:hover{
+  color: lightcoral;
 }
 
+.marco2{
+  background-color: #03738C;
+  width: auto;
+  height: auto;
+}
