@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <link rel="stylesheet" type="text/css" href="/home.css">
+    <!--Estilo pendiente-->
+    <!--<link rel="stylesheet" type="text/css" href="/home.css">-->
     <title>ElectroDisuar</title>
     <meta charset="utf-8" />
   </head>
   <body>
     <header>
-      <header w3-include-html="../header.html"> 
-    </header>
-    <main>
-      <script>w3.includeHTML()</script>
+      <nav>
+        <!--Componente del header--> 
+      </nav>
       <div class="presentacion">
-        <img src="resources/placeholder.jpg" alt="Foto de la tienda" width="1920" height="200">
+        <img src="resources/placeholder.jpg" alt="Foto de la tienda">
         <h1 class="titulo">ElectroDisuar</h1>
         <p class="subtitulo">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
       </div>
-      <div class="galeria">
-        <!-- Componente galería-->
-      </div>
-      <div class="novedades">
-        <h1 class="titulo3">Novedades</h1>
-        <div class="entradas">
-          <div class="entrada">
-            <img src="resources/placeholder.jpg" alt="Foto de la noticia" width="300" height="200" class="noticia">
-            <p class="tituloNoticia">titulo de la notica</p>
-          </div>
-          <div class="entrada">
-            <img src="resources/placeholder.jpg" alt="Foto de la noticia" width="300" height="200" class="noticia">
-            <p class="tituloNoticia">titulo de la notica</p>
-          </div>
-        </div>
-      </div>
+    </header>
+    <main>
+      <section class="galeria">
+        <heading>
+          <h2>Novedades</h2>
+        </heading>
+        <article>
+          <!-- Componente galería -->
+        </article>
+      </section>
+      <section class="novedades">
+        <heading>
+          <h2>Productos destacados</h2>
+        </heading>
+          <article>
+            <!-- Componente Carrusel -->
+          </article>
+      </section>
     </main>
     <footer>
-      <footer w3-include-html="../footer.html"></footer> 
+      <!-- Componente del footer -->
     </footer>
   </body>
-  <tail>
-  </tail>
 </html>
