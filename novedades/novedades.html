@@ -2,93 +2,28 @@
 <html>
     <head>
         <title>Novedades</title>
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
         <link href="novedades.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
-        <header w3-include-html="../header.html">
-
-        </header>
+        <header></header>
         <main>
             <article>
-                <header>Ofertas</header>
-                    <section class="ofertasSection">
-                        <div class="imagen">
-                            <img src="../IMAGEN.png"/>
-                        </div>
-                        <div class="productoInfo">
-                            <div class="mainProduct">
-                                <header class="productName">Product Name</header>
-                                <p class="descuento">Descuento</p>
-                            </div>
-                            <div class="price">
-                                <p class="antes">Antes: </p>
-                                <p class="despues">Ahora: </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ofertasSection">
-                        <div class="imagen">
-                            <img src="../IMAGEN.png"/>
-                        </div>
-                        <div class="productoInfo">
-                            <div class="mainProduct">
-                                <header class="productName">Product Name</header>
-                                <p class="descuento">Descuento</p>
-                            </div>
-                            <div class="price">
-                                <p class="antes">Antes: </p>
-                                <p class="despues">Ahora: </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="ofertasSection">
-                        <div class="imagen">
-                            <img src="../IMAGEN.png"/>
-                        </div>
-                        <div class="productoInfo">
-                            <div class="mainProduct">
-                                <header class="productName">Product Name</header>
-                                <p class="descuento">Descuento</p>
-                            </div>
-                            <div class="price">
-                                <p class="antes">Antes: </p>
-                                <p class="despues">Ahora: </p>
-                            </div>
-                        </div>
-                    </section>
-            </article>
-
-            <article>
-                <header>Destacado</header>
-                <div class="destacadoContainer">
-                    <section class="destacadoSection">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnDjShQzzKVZTGjzUC9UkZCPAZP3GOZSLHw&usqp=CAU"/>
-                        <header class="productName">Product Name</header>
-                        <p>Precio: </p>
-                        <p>Disponibilidad: </p>
-                    </section>
-                    <section class="destacadoSection">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBB_1K9vP4LxGvEsi5mFs18NKLNQI7dzZQWQ&usqp=CAU"/>
-                        <header class="productName">Product Name</header>
-                        <p>Precio: </p>
-                        <p>Disponibilidad: </p>
-                    </section>
-                    <section class="destacadoSection">
-                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISFRYSFhUYFRgaHB8cGhwaGRwZIRwYHhwcGRgcGBwcIy4lHB4rHxgcJjgmKy8xNTU1HSQ7QDs0Py40NTEBDAwMEA8QHBESHDUhISUxNzQ0NDQ6MTExMTE0NDExNDQ0NTE0OjE0MTQxNDE0NDExNDE0NDQ0NDQ0MTQ0NDE0NP/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwIDBAUGAQj/xABMEAACAQIEAgQJBgkLBAMAAAABAgADEQQSITEFQQYiUXEHEzJhcoGRobFCUrLB0dIUM3OCkqLC4fAWIyREU1RiY4OT4hdDhPF0lKP/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EACMRAQEAAQQBBAMBAAAAAAAAAAABEQIxMkEDEiFCgRNRcQT/2gAMAwEAAhEDEQA/AJmiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgImPigxU5WytyNr+fUTjuI+EBKFR6L4aqXS1wLsNfJN1UjUawO5iR4fCanLCVv1h+xKR4TafPDVR62P7MCRYkY1fCeNcuGqd5Y/WsxH8JbG90qr3W+7AlmJC9Twl1b+RVt6YH7E8HhOa2qVr+mPjaTK4TREhE+FGrf8XUt+U/dPW8KT28itf01tGV9KbYkFHwp1/mVP0x9k8qeE+rbRa1/TEZPSneJ88/9RcUT5dcd1T908qeEHE26tTEg87uIymH0PE+c08IOM51cR6nEuv4QsWPJqYn8513jJh9DxPnml4RMX8qpiPU6y4/hDxV+q+It53X6hGTD6CiQFQ8IWMYhQazE8s4190y26f4xRdkrgbXL219kGE4xITpeEavzSr+neZCeEmuD+Kdh53/AHSomWJFKeE1z5WFY/n/APGdh0e4o+Mp0sTlNJHBKrmLXAZVu1wLc9PPA6aIiAiIgIiIFnEaKT2A/CQ/0ve2Pr+dKZ/Vb7JLXFGtSc+aQl0tx4TH1mannGSmLXI5N1tNTa50hHtCrdgD2j1zaVeHP4lcSzeKR2VKeYknOTaxAXY5SRoNwJy3DsSzZCwykkXHrlXFKquqqpceL6yXPy7jMzLex6oIFtRpI3LZp9v2z8QVzqchGh0bckA2JFue9u7eZuM4LUSkmIZzTWo9kU5i2gcsmW1y3VsLkX815z2HQJkALFbNvvtqPbe0scRrq9goICaICb9Qhg9x89s2rC3mtpI3qtkljJcgVcwQ7XyEm981st7XvbS+82WM6PVKVGliHc2qFmRLvnZFUNkKjyWuCDrt59JztFVUgdYpk7QGy311tYH1S3i8UrnybAXWw5UiAuUX2bS+bnBqtmML9OwqMQhY5FOQXvc5MwFtb6mbniXRmrhqNLEPUapnzMEUuWdQVyqwB6hFzmte3ntOZpqgZswZkCLpcBit0sL2IvtynlfFip5a3BuHC2HVOUqEuOrlK38/O8Gu2bMjDr16mVC5JAAW+YBgblMpBuN7XsbWOk3fF+jVXCUqVdqnjs6MQqM5Lda2ZgD1VVWW++o75zSBVLl1LqCul7X3tfQ6dv1S2+KD3zrcMDny5VJbMWUrpZbXtbbeF12yyRl4Knd3RVJzPkBW91UlxmABG2mh07Zu+K9HamEp0K7P44VFBCqzNvcmo2uihSumuu85hSELsy5irdXWwzjNlLaai420v2z0YkN1XUm43GUHxl2IbbQdaxUefnGPY1WyyRmcNo5yyKCMzlc63uguLMQCOqNjfkTztN3xbo/Uwi0ajP41ayIQAzMEBC53c35kmw1Gp5ictRYU7uRdg5yaiyvpZiCDmt2aa2l6jiFYhClvJy2sLPYBmOmqtqbcuUdHqs1SMrhlE1EyLdSc7GoM3UyLm69iBlIBFze3KbvjfAqmDy5znWqmdeszBEy6ZzexYm/aNNDOVw7ZFDgHN1gp0IW9gxykamx/9zLp16bgrkK2uadiOqCvWVtLsLDTsMdHqvqkYhY5Tl8ruvYXAJt7ZawFZ863zEbMGF+RuRpptMjCUnZwqlBf57ZRfbex1mecFXpjM4RRe1i+pP8AhFtZpxdX0F6OUsYalSoxyU8oCqbFi19zyAt7/NM3pt0foYQU6lG6q5ZWVjmysvME623G52mp4XhMXgw2JTEUEUEo5LkqSNGVwV1sbzI4nSxeMVKz16DpfJTysQtyLhUGXc2hWg8bvJe6BPfCYJf8tj+upkJrimUupphgVsrEnQ6WIsdwe0G8l/wcVi1HCAi1qTW9oMJUhREQEREBERAweM/iKnoyCOmL/wBOc/4E/ak6cdNsPV9EyBuldN6mNKorMxpqbKCTYZrnSBh4ap117x8Z0fDeixxFOlWNVU8Y7IgyM9mGbcjQXymcjhqnWXvHxktdBwr4OjmUtkqOy2vowZgCf0jJ21eP2jrEUzTfxZNyjOhPaVOUmbXDdEPGJQqGtk8eoKfzeYXys+QtmveyE7Wmp4u9sRUH+dVH65kkdGcJTfD4SsVculIKpDuFANw11Byn1jkOySNeTbSiZ229Bvi0379Dltb8Is5omuFyCxUIHIuHzDe1yoE5t229Bvi8mBMLTOGWqVcv+C5QxZioBpC9kvlBNtwJYeTpDTnRvyafFJ0nEuhtOmuIIxWepQpmoyeLsDZQ5UNnOoDJfTTOs5h26rfk1+KSYek2CpDC4qqKKrUOHqA1AoBYFQTcje+VdT2SHk3iIlpeMdqd7Z3prfszELe3rm54t0Up0qeJdMQzthyAysiLmu+Q2s5YC99Sompwp/nl/KUfprJQ6dYWmuDxdQIwdlUMxZmuBUUgKCSFFyTYWiL5N4izC4Xx9bxN8ueuqXte2YuL257zbcR6N0qVF8Qldqni6ioVZEW92KXGV2ZRcHygLzB4Ef6XS/8Akp9JpIPTvCU6eDqFKeQvVpljcm58ZfS50F2Y2FhqYmxr5RHXCsB+FVqeHzZM9VlzWvbqk3tfXabTifRpcMi1g7krXFJkqIi65c5IKOwI2HffsmP0QP8ATsN+Xb6DTtvCDTVMNSVUyD8JDd7MHZj6yb+uJsauccDwDhi4p0pM5QBKjlguY2RQxAW4uZk8Q4PToLTrJUZxUNRbMqqQUTtR2BHW7Zl+DtQ2KRSMwNOsCO0FVBE3fhFw6U0wyIhQXqmxJYklFuSWJJ/dE2Pm5DgdGnUZg6B9ABdmRQSbXYrytOt4LwTB1C4emGykWNKo7qQRfU9vmnAUq7JfKbX38/PW82GA4viKRslRkBYEhQBc6DWwnSWYxhxsud0r8U4fRxlPxNVKhS4YhFYG421tGEwdLCUWo01qZFDEBlJI07pxXTrjGIo4lBTqsgVQcoPVLXJ6y8xpzmR0V49iMU+Jaq5a1EaAZVB6wuFGgO+vPSZ7VyNd9DJg8HD9TCr/AJJ+qQ01N3R3ABCi7dZQQLgXAJu2pF7A2vJe8Gz60F3tQJHtECTIiICIiAiIgavpIbYat6P1ifPPS5icTe+6L7maTH036TCi34EEJaooObkAc1+e/UI9ciXj2FFbG0KebIHRQW7NSWgaLDNbKL313PfO04J0upYWitF0r3DOb02UAhmJB1InvTHg2Dp0Uq4eyNTIDDK/XUkC5LC2YHnzvOHqo7M2Ut5RvYjYE6a+7lJ218fttcZixVqtUAIFSq7gHcBiGAPn1nScJ6bUcPSpUnSvmpqFOVlCmxuDYm+oM4xAQUB+f8QkxVpu2qk2566E7ag+fXu2kjevjGYXvb0H/bnXp04pLSFM06+YUwhGdAuYJk8ne3O284phYgf4HH05Zp02YixNtB5Qtr2g93vEQ8m0XnBIKjUmmo96CdhxTpzSq0a1IUqwZ0ZOtUUqpZSpNrXsL7eacY539AfSWUJQZibEka2GYW0F9Af4uDvB5OmXSqFXLAFsrU2sNzlKtb3To+PdM6WIo1aS0qqtUFru6lV6wY6AX5W9c5SofL7k/ZllaDENqTpfyhbTTT3EebtibL5OUZ+BxJpVhUCl8lZXyruQpdiB6hN5xvpdTxVE0Ep1FLMhzO6sAFYNsqje05eqdX5df78ppUze9zyOrA8xt6vjtE2TXyjY8JxviKy1shcJUZiq6EjKVNjY28qbjjfSmni0SktN0IqK93dW2DCwCqPne6cu+oPpt7baSvD0yCDe9mG7A79nw9V9Imy3nGz6PcTGEdKxRnAV1IUhSM2XW5BA2mZx7pEmM8WiI6ZM5OdgxOZLADKo+bOctdE/O525jny5y5h6bDne2YXLAnyTY+Ye2Ok+aQ+E9A66Ug1XD0HJNwxqupFwLKcqEGxB/fOT45wqphnV2CBHd8oQsQuR8rJ1wDpoL895L+HwWMSkhbFU2Gn/AGietre3X2vf90jDp1WqOaTF0ZC1ULkWwzh0NRgczZgSw7PJOnM6clrpFi6GOqirTaopVbEeKz6A3v1W07570ZxdHDLXsalVnQgBadraHVjmJtc+qV0KS0qL2GrIha/I+KZrDTtcn1RgaK0qLkal0RiTa4Pi2awsNNXMmT2cq6AXOusmjwagLUpKP7uD7T+6QrVOkkXhXGqmByV0Q1CtNEKDUlSXvbTzXlE6RMbB1jUpo5FiyqxHZcAzJgIiICIiBoOlXDaT0KtVkBdEJVtbjKCRIE6QYxqeJoVVtmVARcXFwTuOc+iuOi+Gr/kqn0DPmvpBVAqUmKhgE2N7HXnYg+yBXj+kteuro60wHy3ypltlIIy69XYXmrxNgzdYDU76a3Og7ZVhSrLUawGhtfWwyObC/nAlNR1Dve/lG1u+49hsfVJ218b/AFXhz5Hp/dmMxUbMPXp/GsyEcHKRe2cb27FvLCMovfMOy38dlx65G9XGLyfI9B/25jtlvYMD2cifVymSGBK2vaz2vvs29pYR055vVbbnv26eyDXtF4W7hkHszCYrAXIuD8fZMi/0Pr/dKFqJzzeq3eN+V9fXCa+l5rHOCbDKmtr8l5TCa2oBBmU7eX6KfsS0HTW4bblbuHsBtE2XybrtQAlwTbr9l/nyxTsSLEHUbd8uVjYv6Y/ahHW48q+nO+txqfd7Imxr5R7UAs1zbrN8B7JRhrZ1sQdZ67WB9JvgJXRqKWGjXuLa+326nvMdF5xQbZFubb8vPz7J7hrFtxazC/Z1T2ynNZU357Gx35S7QdCdQ1tb6/Jsbgdw2jo+acsJw2gtJMmJqsdBrUJPefZ75GHTWmQ1FmLBmDgq1xZVZQjBSbrmue/LJBQcJqUVVaFMbfIsLDVesBfkPfeR10t8WKlJctIOAfGGmuVWUsMhPVGts3La15pyjF4XxRUSrTqM+V16thnOcKyC5JFls/6onvCOJJTSrTfMFderlUMc+Vl1uRYEN7hLVGvTzG6pbPbYeTY3P75XUWmqaIWBS4IQHrb5s+4ttaYurFxh6p/mlmZqns0zmTD4NqKVq5V1DBaINmAOuawOvPUyHjUNiuVdxrYX35NuO6TT4J1/nqp7KSD2tf6pp5UoKoAsJVEShERAREQMHjAvh64/y3+iZ8ydIdTSP+E/VPp/iA/mqnoN9Ez5f40pPiQOYNpBY4ahZK1jayE9/VdbfrSxiL5joDqd7jznUbnv7Jm8KQp49T/ZnazDvBGhHdMKqzhsym17bHzDceuG5wv9hT0C+mD7pQ9ydl940BtfTfl7RKkdiBck2dd/XKXLqWsd77G+l+dtpF1cYuU/kD0x7j9sstcnYDbtG40sBpyPsMvUnJKEm5u3wEtK7poCR3a+fcRDVxi4ptY6eQe7QmWmFydB6rjXu2tax7LS4GJtzJRvbdpR4yomlyLev37Qa+l0nyjp5Kbi/wAzlMdhvoB7fXfl5vXpeXiCcwG5RPN8yW/HVFHlEcoi+TeLrnWppfrcxfk0tU11G242v225/wDvSXHUkuBvmHO3Ju2UU6j3GpsSB7xE2NfKKmOh28ptxfkJ5h16wJtvyv2E8/V7Z6wJBtyZjvbkNoou+YAk6++wjovKPL9RRpsdxf5XtHqlzC9VgxW5F9BzsNQPhppLVjlQjkDzsfKMvYF3LqAbte6gnTNsvvMdJ8onGpxesKKFsFWTbUCmTY6bB76X17LcpFXTB9aFOxsitlc5SHVmv1SrMDlta5N7kyWXTHeKQVPFMpGwZuY2vaRJ0xV1eihFkCMKetz5bB8x28oaW0taWOZhej1OoiOcXSRmAOViote+jHNcbdnMS1xXha0KYK4mnVubZEfNbXmJuB0hqIhpHxNkXIzBKuYDRGyuCMuqLqNsswOL42q2H8WwCgAP+LqoWXOBdc5ykZnGw9cmL+3f8mnFxpx9uZvqO8SafBWjNWrMGy5Up3Fr3ve4PZtIYybNmG405779km3wQDrYo+amPc0rik+IiVCIiAiIgY+O/Fv6LfRM+XePJZaJ9Ie+fUOPF6dT0G+iZBX8jMXj6NNqKg5Wa5LBbasLa7nQe2QcdwRrGpcm2Q5rZb5QRe2YjWx2F+6YlRVLWY2BC6nsyjbzztf+lnFB5KJqLH+cUadh11mZT8HXEVQL+DISB5QxRF/PlBsIalmLKj7QLe4PWXa+nlds8ZVLNcgWJ3vvc22kgVfB3xBt8Gp/8on4mUt0D4itv6GP/tfv0hbq02YcIgsU1B6x1Hcss01Ui5IB89+47TscZ0B4m7Arhslv85H95bSWv5B8X/sv/wBKf3pMLdWmzDlyNQND1G2/OlCqh1zAHbW+38ad06g+D/it83ide3xlP789PQTi/wDZH/dp/elLZXMuPK9BP2JQFU3swBI535bfx3bTpv5A8VBzeJ1/K0/vwehHFf7I/wC7T+9BbLu5yr8v0x+1PKaLcWIvcG2upuNB/HbrN0eiHEEP4vKfyifU09PRjiHzR/uL9smC2W5rRtt+e3wErpKt+qRpy17Dc/xytvNqOi2NT5Kr/qKPrno6M41t8lvPVX7Yx0eqZlabSyX0Fj5/lGZGBpguoVspLBQfm3KgN6tD3zYr0Yxg2yAflAPhPD0axZ6pKH/UFvfLgzM5SzieG1EoqyYyo5AzAZUOwuQBk0va3mvsZFXS1nNSk7s2qaIwUZFV3UABQBY5c23PnpMhOA8TG1a3/kkfXKG6JY12zM9Nm5lq2Y+skGXDm09dM7u3jEN2Yi7nYkna0zcfjVdKgtRUuzMMhZjd3ptl1FgihDbvm1o+D7Fvs9Ad9T/jMyn4MMWd62GH+p/xgcNTTrKO1h8ZO3glSxxfbmp/RacbS8FuJVlfx+HbKQbZzrbWw6s7zwb4RqdTGhgV66AX006/2SK76IiVCIiAiIgUOoIIOx0Mw6fDKKgAIthoOqu3fa8z4gYZ4bR+YvsE8PC6PzBM2IGAeE0PmLLb8Dwx/wC2Js4gaN+i+FPySP0frEoHRXDjYuO7J92b+IHNVeiaHycRWTuFA/SpGcH4QsPi+HtQNDElkqZwxqrR6rLlIAIRRqGOnmkwTGxuBpV1yVaaVF7HUML9tjJiLmvng8f4hzxNL9Cl9ktPxvH88RTP5lP7snR+hfDD/VKXqW3wj+RXDP7rT9/2xhc1891eI4knWqh/MT7sx2x1e/lp+gn3Z9E/yF4X/dKf632y4vQzhg/qdD1oD8Ywlr53wxxVV0pqys7sqABE3Zgo+T55PWD8HvD0UKyGqwGrMxBJ5nKtlHqE32D4LhaJBpUKVMjmtNVPtAmxlRzq9CuGj+rJ7WP1yv8Akdw7+7U/1vtm/iBol6J8PG2GT3/bL6dHsGu2Hp/o3+M20QMFOEYZdqKD80S6uCpDZFHqmTEDH/A6fzfeftlVLDopJAAJtc8zba5l6ICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgf/Z"/>
-                        <header class="productName">Product Name</header>
-                        <p>Precio: </p>
-                        <p>Disponibilidad: </p>
-                    </section>
-                </div>
+                <!--Realmente no es necesario crear todas las secciones ya que siguen la misma estructura-->
+                <section class="ofertasSection">
+                    <header class="sectionTitle">Ofertas</header>
+                    <!--Componente Carrucel-->
+                </section>
+                <section class="destacadosSection">
+                    <header class="sectionTitle">Ofertas</header>
+                    <!--Componente Carrucel-->
+                </section>
+                <section class="topventasSection">
+                    <header class="sectionTitle">Ofertas</header>
+                    <!--Componente Carrucel-->
+                </section>
             </article>
         </main>
-        <footer w3-include-html="../footer.html">
-
-        </footer>
-        <script>
-            w3.includeHTML();
-        </script>
+        <footer></footer>
     </body>
 </html>

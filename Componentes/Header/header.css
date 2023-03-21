@@ -9,47 +9,72 @@ body {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .marco{
   background-color: #03738C;
-  width: 20%;
-  height: 20%;
+  width: auto;
+  height: auto;
   border-radius: 5px;
 }
 
 .logo{
-  object-fit: contain;
   width: 50%;
   height: 50%;
 }
 
-.contenedorLinks{
-  display: flex;
-  align-content: center;
-  justify-content: flex-end
+.topBarLinks a{
+  transition: color 0.5s ease;
 }
 
-.topBarLinks{
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 10px;
-  list-style: none;
-  margin:auto;
-}
-
-li{
-  padding: 10px;
-}
-
-a:link, a:visited, a:active {
+.topBarLinks a:link, a:visited, a:active {
   text-decoration: none;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
+}  
+
+.topBarLinks a:hover{
+  color: lightcoral;
 }
 
-.Acceder{
-  background-color: #03738C;
+@media only screen and (min-width:702px){
+
+  .topBarLinks{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    margin:auto;
+    padding-inline-start: 0;
+  }
+  
+  .topBarLinks li{
+    padding: 10px;
+    padding-left: 15px;
+    margin: 0;
+  }
+
+  .contenedorLinks{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end
+  }
+
+  .marco2{
+    background-color: #03738C;
+    width: auto;
+    height: auto;
+  }
+
 }
 
+@media only screen and (max-width: 702px){
+
+  .contenedorLinks{
+    display: none;
+  }
+
+  /*Hamburguesote doble queso*/
+
+}
