@@ -1,0 +1,251 @@
+[
+    {
+        "nombre": "Tira Led",
+        "disponibilidad": true,
+        "seccion": "Iluminación",
+        "rutaImagen":"/resources/iluminacion/tiraLed.png",
+        "precio": 16.04,
+        "oferta": false,
+        "precioOferta": null
+    },
+
+    {
+        "nombre": "Lampara Led",
+        "disponibilidad": true,
+        "seccion": "Iluminación",
+        "rutaImagen":"/resources/iluminacion/lamparaLed.png",
+        "precio": 29.99,
+        "oferta": false,
+        "precioOferta": null
+    },
+
+
+    {
+        "nombre": "Bbombilla Led",
+        "disponibilidad": true,
+        "seccion": "Iluminación",
+        "rutaImagen":"/resources/iluminacion/bombillaLed.png",
+        "precio": 13.04,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+    
+    {
+        "nombre": "Tubo fluorescente",
+        "disponibilidad": true,
+        "seccion": "Iluminación",
+        "rutaImagen":"/resources/iluminacion/fluerescente.jpg",
+        "precio": 7.99,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Portalamparas",
+        "disponibilidad": true,
+        "seccion": "Iluminación",
+        "rutaImagen":"/resources/iluminacion/portalamparas.jpg",
+        "precio": 3.50,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Cable de cobre 2mm",
+        "disponibilidad": true,
+        "seccion": "Cableado",
+        "rutaImagen":"/resources/cableado/cableCobre.jpg",
+        "precio": 10.25,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Cable rj45",
+        "disponibilidad": true,
+        "seccion": "Cableado",
+        "rutaImagen":"/resources/cableado/rj45.jpg",
+        "precio": 13.25,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Cable de USB a USB",
+        "disponibilidad": true,
+        "seccion": "Cableado",
+        "rutaImagen":"/resources/cableado/usbaUsb.jpg",
+        "precio": 8.35,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Cable de alimentación",
+        "disponibilidad": true,
+        "seccion": "Cableado",
+        "rutaImagen":"/resources/cableado/cable-alimentacion.jpg",
+        "precio": 5.86,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Vga a HDMI",
+        "disponibilidad": true,
+        "seccion": "adaptadores",
+        "rutaImagen":"/resources/adaptadores/VGA_HDMI.jpg",
+        "precio": 8.28,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "USB a USBC",
+        "disponibilidad": true,
+        "seccion": "adaptadores",
+        "rutaImagen":"/resources/adaptadores/usb-usbc.jpg",
+        "precio": 8.28,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Hub USB",
+        "disponibilidad": true,
+        "seccion": "adaptadores",
+        "rutaImagen":"/resources/adaptadores/hub-usb.jpg",
+        "precio": 13.08,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Hub HDMI",
+        "disponibilidad": true,
+        "seccion": "adaptadores",
+        "rutaImagen":"/resources/adaptadores/hub-hdmi.jpg",
+        "precio": 8.28,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Caja de resistencias",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/caja-resistencias.jpg",
+        "precio": 8.28,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Servomotor",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/servomotor.jpg",
+        "precio": 0.98,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Motor",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/motor.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Zumbador",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/zumbador.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "kit de diodos",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/kit-diodos.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Arduino UNO",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/arduinoUno.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Arduino MEGA 2560",
+        "disponibilidad": true,
+        "seccion": "electrónica",
+        "rutaImagen":"/resources/electronica/arduinoUno.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+    
+
+    {
+        "nombre": "Multímetro",
+        "disponibilidad": true,
+        "seccion": "Sensores",
+        "rutaImagen":"/resources/sensores/multimetro.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+
+    {
+        "nombre": "Sensor de humo",
+        "disponibilidad": true,
+        "seccion": "Sensores",
+        "rutaImagen":"/resources/sensores/sensor-humo.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    },
+
+
+    {
+        "nombre": "Tester de pilas",
+        "disponibilidad": true,
+        "seccion": "Sensores",
+        "rutaImagen":"/resources/sensores/tester-pilas.jpg",
+        "precio": 1.05,
+        "oferta": false,
+        "precioOferta": null
+    }
+]
