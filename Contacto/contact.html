@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!--Estilo pendiente-->
-    <!--<link rel="stylesheet" type="text/css" href="/contact.css">-->
+    <link rel="stylesheet" type="text/css" href="/Contacto/contact.css">
     <title>ElectroDisuar</title>
     <meta charset="utf-8" />
   </head>
@@ -11,34 +10,30 @@
       <nav>
         <!-- Componente header -->
       </nav>
-      <h1>Contáctanos</h1>
+      <div class="titulo">
+        <p>Contáctanos</p>
+      </div>
     </header>  
     <main>
       <section class="formulario">
-        <heading class="titulo">
-          <h2 class="contactanos">Lorem uipsum dolor porro:</h2>
+        <heading class="subtitulo">
+          <p class="contactanos">Dinos en que podemos ayudarte:</p>
         </heading>
         <form class="campos">
           <fieldset>
-            <p>
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre">
-            </p>
-            
-            <p>
-              <label for="telefono">Teléfono:</label>
-              <input type="text" id="telefono" name="telefono">
-            </p>
-          
-            <p>
-              <label for="correo">Correo Electrónico:</label>
-              <input type="text" id="correo" name="correo">
-            </p>
-            
-            <p>
-              <label for="mensaje">Mensaje:</label>
-              <input type="text" id="mensaje" name="mensaje" class="mensaje">
-            </p>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono">
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="text" id="correo" name="correo">
+
+            <label for="mensaje">Mensaje:</label>
+            <input type="text" id="mensaje" name="mensaje" class="mensajebox">
+
           </fieldset>
           <button type="button" class="boton">Enviar</button>
         </form>
