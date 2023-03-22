@@ -17,18 +17,28 @@ main{
 
 #footerDiv{
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     height: 2.5rem;  
     background: var(--azul1);
     width: 100%;
     margin: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 67px;
+    height: 68px;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.footerBack{
+    margin: 0px;
+    height: 100%;
+    position: relative;
+    background-color: var(--azul1);
+    z-index: 200;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .footerSub{
     background: var(--azul2);
@@ -36,6 +46,7 @@ main{
     justify-content: space-between;
     height: 100%;
     padding: 20px;
+    margin: 0px;
 }
 
 #footerDiv h1{
@@ -70,8 +81,12 @@ main{
     grid-row: 2;
 }
 
-.footerSub h1,.footersub p{
+.footerSub h1{
     margin: 0px;
     margin-right: 10px;
 }
 
+.email p, .tlf p, .direccion p{
+    margin: 0px;
+    margin-right: 10px;
+}

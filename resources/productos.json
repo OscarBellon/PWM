@@ -110,7 +110,7 @@
 
     {
         "nombre": "USB a USBC",
-        "disponibilidad": true,
+        "disponibilidad": false,
         "seccion": "adaptadores",
         "rutaImagen":"/resources/adaptadores/usb-usbc.jpg",
         "precio": 8.28,
