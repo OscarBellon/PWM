@@ -7,48 +7,38 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
-
 body{
-  min-height: 100px;
-  
-  position: relative;
+  min-height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #EFEFEF;
+  background-color: #ffffff;
 }
 .slide-container{
   max-width: 1120px;
-  width: 100%;
+  width: 40%;
   padding: 40px 0;
+  justify-content: center;
 }
 .slide-content{
-  margin: 0 40px;
-  height: 215px;
-  overflow-y: hidden;
+  margin: 0px 0px;
+  overflow: hidden;
   border-radius: 25px;
-}
-.slide-content::-webkit-scrollbar {
-  display: none;
+  justify-content: space-around;
 }
 .card{
-  height: auto;
-  width: 125px !important;
   border-radius: 25px;
-  background-color: #FFF;
+  background-color: #919191;
+  margin-right: 100px;
+  width: 129px !important;
+
 }
-.image-content,
-.card-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px;
+.wrapper{
+
 }
-.image-content{
-  position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
-}
+
+
+
 .overlay{
   position: absolute;
   left: 0;
@@ -72,21 +62,8 @@ body{
   border-radius: 0 25px 0 0;
   background-color: #FFF;
 }
-.card-image{
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #FFF;
-  padding: 3px;
-}
-.card-image .card-img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-}
+
+
 .name{
   font-size: 18px;
   font-weight: 500;
@@ -97,27 +74,13 @@ body{
   color: #707070;
   text-align: center;
 }
-.button{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: white;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button:hover{
-  background: #265DF2;
-}
 
 .swiper-navBtn{
-  color: #f2f2f2;
+  color: #6E93f7;
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
-  color: #6c6c6c;
+  color: #4070F4;
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
