@@ -13,7 +13,7 @@
     </header>
     <header>
       <div class="presentacion">
-        <img src="resources/placeholder.jpg" alt="Foto de la tienda" class="foto">
+        <img src="resources/Banner.PNG" alt="Foto de la tienda" class="foto">
         <div class="textos">
           <p class="titulo">ElectroDisuar</p>
           <p class="subtitulo">Siempre a tu lado, queremos ser la resistensia de tu diodo</p>
@@ -26,15 +26,15 @@
           <div class="subtitulo1">
             <p>Novedades</p>
           </div>
-          <article>
-            <!-- Componente galería -->
+          <article id="carrusel">
+            <!-- Componente Carrusel -->
           </article>
         </section>
         <section class="novedades">
           <div class="subtitulo2">
             <p>Productos destacados</p>
           </div>
-            <article>
+            <article id="carrusel">
               <!-- Componente Carrusel -->
             </article>
         </section>
@@ -64,6 +64,7 @@
     function init() {
       loadTemplate("/Componentes/Header/header.html","header");
       loadTemplate("/Componentes/footer/footer.html","footer");
+      loadTemplate("/Componentes/carrusel/carrusel.html","carrusel");
     }
   </script>
 </html>
