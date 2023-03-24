@@ -14,12 +14,11 @@
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <li>Sección A</li>
-                        <li>Sección B</li>
-                        <li>Sección C</li>
-                        <li>Sección D</li>
-                        <li>Sección E</li>
-                        <li>Sección F</li>
+                        <li id="adaptadores">Adaptadores</li>
+                        <li id="cableado"><a href="#">Cableado</a></li>
+                        <li id="detectores"><a href="#">Detectores</a></li>
+                        <li id="electronica"><a href="#">Electrónica</a></li>
+                        <li id="iluminacion"><a href="#">Iluminación</a></li>
                     </ul>
                 </div>
             </nav>
@@ -35,6 +34,34 @@
     </body>
     <script>
         document.addEventListener('DOMContentLoaded', init);
+
+        document.getElementById("adaptadores").addEventListener("click",function () {
+            removeProducts();
+            addProducts("adaptadores");
+        })
+        document.getElementById("cableado").addEventListener("click",function () {
+            removeProducts();
+            addProducts("cableado");
+        })
+        document.getElementById("detectores").addEventListener("click",function () {
+            removeProducts();
+            addProducts("sensores");
+        })
+        document.getElementById("electronica").addEventListener("click",function () {
+            removeProducts();
+            addProducts("electronica");
+        })
+        document.getElementById("iluminacion").addEventListener("click",function () {
+            removeProducts();
+            addProducts("iluminacion");
+        })
+
+        function removeProducts() {
+            document.querySelectorAll("article").forEach(element => {
+                element.remove();
+            });
+        }
+        
 
         const supportsTemplate = function () {
             //create a template element and make sure it has a 'content' property
@@ -62,7 +89,7 @@
 
         }
 
-        function addProducts(){
+        function addProducts(filtro){
             fetch("/resources/productos.json")
             .then((response) => {
                 return response.json();
@@ -70,7 +97,11 @@
             .then((products) =>{
                 if ('content' in document.createElement('template')) {
                     const container = document.getElementById('contenedorDeProductos');
-
+                    
+                    if (filtro!=null) {
+                        products=products.filter(producto => producto.seccion== filtro);
+                    }
+                    
                     products.forEach((product) => {
 
                         const tmpl = document
