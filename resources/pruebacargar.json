@@ -1,0 +1,10 @@
+{
+    "quienesSomos": {
+      "descripcion": "It is a long esta",
+      "imagen": "pruebamarca.png"
+    },
+    "marcas": {
+      "imagenes": [      {        "imagen": "pruebamarca.png"      },      {        "imagen": "pruebamarca1.png"      },      {        "imagen": "pruebamarca2.png"      }    ]
+    }
+  }
+  
