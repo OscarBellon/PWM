@@ -6,9 +6,11 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <header id="header">
+      <!-- Componente header -->
+    </header>
     <header>
       <nav>
-        <!-- Componente header -->
       </nav>
       <div class="titulo">
         <p>Contáctanos</p>
@@ -39,8 +41,30 @@
         </form>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <!-- Componente del footer -->
     </footer>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', init);
+
+    function loadTemplate(fileName, id, callback) {
+
+      fetch(fileName).then((res) => {
+          return res.text();
+      }).then((text) => {
+          document.getElementById(id).innerHTML = text;
+          //console.log(text)
+
+          if(callback){
+              callback();
+          }
+      })
+    }
+
+    function init() {
+      loadTemplate("/Componentes/Header/header.html","header");
+      loadTemplate("/Componentes/footer/footer.html","footer");
+    }
+  </script>
 </html>
