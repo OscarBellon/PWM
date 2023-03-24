@@ -54,7 +54,7 @@
                 }
             })
         }
-
+        
         function init() {
             loadTemplate("/Componentes/Header/header.html","header");
             loadTemplate("/Componentes/footer/footer.html","footer");
@@ -87,6 +87,7 @@
                             const tmpl = document
                                 .getElementById('producto')
                                 .content.cloneNode(true);
+                            
 
                             tmpl.querySelector('article').innerHTML= text;
                             tmpl.querySelector(".nombreProducto").innerText=product.nombre;
@@ -97,6 +98,30 @@
                             } else {
                                 tmpl.querySelector(".circulo").style.background="lightcoral";
                             }
+
+                            tmpl.querySelector("article").addEventListener("click",
+                            function () {
+                                fetch("/catalogo/producto.html")
+                                .then((res)=>{
+                                    return res.text();
+                                })
+                                .then((productoHtml)=>{
+                                    var parser = new DOMParser();
+                                    var doc = parser.parseFromString(productoHtml, "text/html");
+                                    doc.querySelector(".precio").innerText=product.precio+" €";
+                                    doc.querySelector(".nombreProducto").innerText=product.nombre;
+
+                                    if (product.disponibilidad) {
+                                        doc.querySelector(".circulo").style.background="#03738c"
+                                    } else{
+                                        doc.querySelector(".circulo").style.background="lightcoral"
+                                    }
+
+                                    document.querySelector("html").innerHTML=doc.querySelector("html").innerHTML;
+                                    init();
+                                    console.log(doc);
+                                })
+                            })
                             container.appendChild(tmpl);
                         })
                         
