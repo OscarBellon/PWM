@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
-         <link rel="stylesheet" type="text/css" href="catalogo.css">
          <link rel="stylesheet" href="/catalogo/css/swiper-bundle.min.css">
          <link rel="stylesheet" href="producto.css">
         </head>
     <body>
-        <header w3-include-html="../header.html"> 
-        </header>
+        <header id="header"></header>
         <main>
-
             <article class="productoPrincipal">
                 <div class="imagenProducto">
-                <img src="../IMAGEN.png" class="imPro"alt="producto"></div>
-                <h1>Nombre del producto</h1>
-                <div class="primeraFila">
-                <h2>Precio €</h2>
-                <div class="disponibilidad">Disponibilidad en tienda <div class="circulo"></div></div>
-                </div>
-                <h3>Descripción</h3>
-                <div class="descripcion">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, vitae tempore. Repudiandae nam dolorem qui? Expedita impedit, sint numquam est modi sapiente fugit. Magni vel voluptate quidem voluptatem velit reprehenderit.
-                </div>
+                <img src="/resources/IMAGEN.png" class="imPro"alt="producto"></div>
+                <section id="informacion">
+
+                    <h1 class="nombreProducto">Nombre del producto</h1>
+
+                    <div class="descripcion">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, vitae tempore. Repudiandae nam dolorem qui? Expedita impedit, sint numquam est modi sapiente fugit. Magni vel voluptate quidem voluptatem velit reprehenderit.
+                    </div>
+                    
+                    <div class="envoltorio">
+                    <div class="fila">
+                    <h2 class="precio">Precio €</h2>
+                    <div class="disponibilidad">Disponibilidad<div class="circulo"></div></div>
+                    </div></div>
+                </section>
             </article>
-            <div class="scrollers">
+            <aside>
+                <h2>Productos Relacionados</h2>
+
+            </aside>
+            <!--<div class="scrollers">
             <div w3-include-html="carusel.html"></div>
             </div>
             <script src="js/swiper-bundle.min.js"></script>
@@ -39,14 +44,34 @@
                 script1.setAttribute("src","/catalogo/js/swiper-bundle.min.js")
                 document.body.appendChild(script2)
             }
-            </script>
+            </script>-->
         </main>
         
 
     <!-- JavaScript -->
     
-    <footer w3-include-html="../footer.html"></footer>
+    <footer id="footer"></footer>
     </body>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', init);
+        function loadTemplate(fileName, id, callback) {
+
+        fetch(fileName).then((res) => {
+            return res.text();
+        }).then((text) => {
+            document.getElementById(id).innerHTML = text;
+            //console.log(text)
+
+            if(callback){
+                callback();
+            }
+        })
+        }
+
+        function init() {
+        loadTemplate("/Componentes/Header/header.html","header");
+        loadTemplate("/Componentes/footer/footer.html","footer");
+        }
+    </script>
     
 </html>
