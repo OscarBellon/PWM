@@ -1,65 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="stylesheet" type="text/css" href="./inicioSesion.css">
-    <title>ElectroDisuar</title>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <header id="header">
-      <nav>
-        <!-- Componente header -->
-      </nav>
-    </header>
-    <header>
-      <div class="titulo">
-        <p>Acceder</p>
-      </div>
-    </header>  
-    <main>
-      <section class="formulario">
-        <heading class="subtitulo">
-          <p class="contactanos">Registro de Usuario</p>
-        </heading>
-        <form class="campos">
-          <fieldset>
+<html>
+    <head>
+        <title>Iniciar Sesión</title>
+        <link href="inicioSesion.css" rel="stylesheet" type="text/css">
+    </head>
 
-            <label for="telefono">Correo Electrónico:</label>
-            <input type="text" id="telefono" name="telefono">
+    <body>
+        <header></header>
+        <main>
+            <div id="contTitle">
+                <p id="title"></p>
+            </div>
+            <div id="contSubtitle">
+                <p id="subtitle"></p>
+            </div>
+            <div id="contenedorFormulario">
+                <form>
+                    <label for="email">Correo electrónico:</label>
+		            <input type="email" id="email" name="email" required><br><br>
+		
+		            <label for="password">Contraseña:</label>
+		            <input type="password" id="password" name="password" required><br><br>
+		
+		            <input type="submit" value="Acceder">
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
 
-            <label for="correo">Contraseña:</label>
-            <input type="text" id="correo" name="correo">
-
-          </fieldset>
-          <button type="button" class="boton">Acceder</button>
-          <button type="button" class="boton">Registrarse</button>
-        </form>
-      </section>
-    </main>
-    <footer id="footer">
-      <!-- Componente del footer -->
-    </footer>
-  </body>
-  <script>
-    document.addEventListener('DOMContentLoaded', init);
-
-    function loadTemplate(fileName, id, callback) {
-
-      fetch(fileName).then((res) => {
-          return res.text();
-      }).then((text) => {
-          document.getElementById(id).innerHTML = text;
-          //console.log(text)
-
-          if(callback){
-              callback();
-          }
-      })
-    }
-
-    function init() {
-      loadTemplate("/Componentes/Header/header.html","header");
-      loadTemplate("/Componentes/footer/footer.html","footer");
-    }
-  </script>
 </html>
