@@ -19,6 +19,9 @@ main{
     margin: 0px;
 
 }
+.productoPrincipal h1{
+    font-size: large ;
+}
 .productoPrincipal{
     width: 49vw;
     display: grid;
@@ -33,7 +36,7 @@ aside{
     grid-column: 2;
 }
 
-aside h2{
+.rel{
     background: var(--azul2);
     color: white;
     padding: 5px;
