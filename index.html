@@ -34,7 +34,7 @@
           <div class="subtitulo2">
             <p>Productos destacados</p>
           </div>
-            <article id="carrusel">
+            <article id="carrusel2">
               <!-- Componente Carrusel -->
             </article>
         </section>
@@ -64,7 +64,77 @@
     function init() {
       loadTemplate("/Componentes/Header/header.html","header");
       loadTemplate("/Componentes/footer/footer.html","footer");
-      loadTemplate("/Componentes/carrusel/carrusel.html","carrusel");
+      cargaCarrusel("carrusel");
+      cargaCarrusel("carrusel2");
+    }
+
+    function cargaCarrusel(id){
+      loadTemplate("/Componentes/carrusel/carrusel.html",id,function (){
+        let script1 =document.createElement("script");
+        script1.setAttribute("src","/Componentes/carrusel/js/swiper-bundle.min.js");
+        document.body.appendChild(script1);
+        let script2 =document.createElement("script");
+        script2.setAttribute("src","/Componentes/carrusel/js/script.js");
+        document.body.appendChild(script2);
+
+        fetch("resources/productos.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((products) => {
+          let tarjetas =document.querySelectorAll(".card");
+          for (let i = 0; i < tarjetas.length; i++) {
+            loadTemplateToElement("/catalogo/productoComponente.html",tarjetas[i],function () {
+              tarjetas[i].querySelector(".nombreProducto").innerText=products[i].nombre;
+              tarjetas[i].querySelector(".precio").innerText=products[i].precio;
+              tarjetas[i].querySelector(".producto").src=products[i].rutaImagen;
+              cargaPaginaProducto(tarjetas[i],products,products[i],".producto");
+            });
+          }
+          
+        });
+      });
+    }
+
+    function cargaPaginaProducto(tmpl,products,product,elemento){
+      console.log(tmpl.querySelector(elemento));
+      tmpl.querySelector(elemento).addEventListener("click",
+      function () {
+          fetch("/catalogo/producto.html")
+          .then((res)=>{
+              return res.text();
+          })
+          .then((productoHtml)=>{
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(productoHtml, "text/html");
+              doc.querySelector(".precio").innerText=product.precio+" €";
+              doc.querySelector(".nombreProducto").innerText=product.nombre;
+              doc.querySelector(".imPro").src=product.rutaImagen;
+
+              if (product.disponibilidad) {
+                  doc.querySelector(".circulo").style.background="#03738c"
+              } else{
+                  doc.querySelector(".circulo").style.background="lightcoral"
+              }
+              document.querySelector("html").innerHTML=doc.querySelector("html").innerHTML;
+              cargaCarrusel(products,product);
+              init();
+          })
+      })
+  }
+
+    function loadTemplateToElement(fileName, obj, callback) {
+
+      fetch(fileName).then((res) => {
+          return res.text();
+      }).then((text) => {
+          obj.innerHTML = text;
+          console.log(text)
+
+          if(callback){
+              callback();
+          }
+      })
     }
   </script>
 </html>

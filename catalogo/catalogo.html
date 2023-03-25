@@ -67,7 +67,6 @@
             });
         }
         
-
         const supportsTemplate = function () {
             //create a template element and make sure it has a 'content' property
             return 'content' in document.createElement('template');
@@ -128,57 +127,17 @@
                             tmpl.querySelector('article').innerHTML= text;
                             tmpl.querySelector(".nombreProducto").innerText=product.nombre;
                             tmpl.querySelector(".precio").innerText=product.precio;
+                            tmpl.querySelector("img").src=product.rutaImagen;
                             if (product.disponibilidad) {
                                 console.log("cambio de color")
                                 tmpl.querySelector(".circulo").style.background="#03738c";
                             } else {
                                 tmpl.querySelector(".circulo").style.background="lightcoral";
                             }
-
-                            tmpl.querySelector("article").addEventListener("click",
-                            function () {
-                                fetch("/catalogo/producto.html")
-                                .then((res)=>{
-                                    return res.text();
-                                })
-                                .then((productoHtml)=>{
-                                    var parser = new DOMParser();
-                                    var doc = parser.parseFromString(productoHtml, "text/html");
-                                    doc.querySelector(".precio").innerText=product.precio+" €";
-                                    doc.querySelector(".nombreProducto").innerText=product.nombre;
-
-                                    if (product.disponibilidad) {
-                                        doc.querySelector(".circulo").style.background="#03738c"
-                                    } else{
-                                        doc.querySelector(".circulo").style.background="lightcoral"
-                                    }
-
-                                    
-                                    document.querySelector("html").innerHTML=doc.querySelector("html").innerHTML;
-                                    loadTemplate("/Componentes/carrusel/carrusel.html","carrusel",function () {
-                                        console.log(document.querySelectorAll(".card"));
-                                        document.querySelectorAll(".card").forEach(element => {
-                                        console.log("hey");
-                                        loadTemplateToElement("/catalogo/productoComponente.html",element);
-                                        let script1 =document.createElement("script")
-                                        script1.setAttribute("src","/catalogo/js/script.js")
-                                        document.body.appendChild(script1)
-                                        let script2 =document.createElement("script")
-                                        script2.setAttribute("src","/catalogo/js/swiper-bundle.min.js")
-                                        document.body.appendChild(script2)
-                                    });
-                                    });
-                                    
-                                    
-                                    
-                                    init();
-                                })
-                            })
+                            
+                            cargaPaginaProducto(tmpl,products,product,"article");
                             container.appendChild(tmpl);
                         })
-                        
-
-                        
                         
                     });
                 } else {
@@ -186,6 +145,58 @@
                 }
             })
         }
+
+        function cargaPaginaProducto(tmpl,products,product,elemento){
+            console.log(tmpl.querySelector(elemento));
+            tmpl.querySelector(elemento).addEventListener("click",
+            function () {
+                fetch("/catalogo/producto.html")
+                .then((res)=>{
+                    return res.text();
+                })
+                .then((productoHtml)=>{
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(productoHtml, "text/html");
+                    doc.querySelector(".precio").innerText=product.precio+" €";
+                    doc.querySelector(".nombreProducto").innerText=product.nombre;
+                    doc.querySelector(".imPro").src=product.rutaImagen;
+
+                    if (product.disponibilidad) {
+                        doc.querySelector(".circulo").style.background="#03738c"
+                    } else{
+                        doc.querySelector(".circulo").style.background="lightcoral"
+                    }
+                    document.querySelector("html").innerHTML=doc.querySelector("html").innerHTML;
+                    cargaCarrusel(products,product);
+                    init();
+                })
+            })
+        }
+
+        function cargaCarrusel(products,product){
+            loadTemplate("/Componentes/carrusel/carrusel.html","carrusel",function () {
+                let tarjetas =document.querySelectorAll(".card");
+                console.log(tarjetas);
+                let productosFiltrados = products.filter(element=> element.seccion==product.seccion)
+                console.log(productosFiltrados);
+                for (let i = 0; i < productosFiltrados.length; i++) {
+                    loadTemplateToElement("/catalogo/productoComponente.html",tarjetas[i],function () {
+                        tarjetas[i].querySelector(".nombreProducto").innerText=productosFiltrados[i].nombre;
+                        tarjetas[i].querySelector(".precio").innerText=productosFiltrados[i].precio;
+                        tarjetas[i].querySelector(".producto").src=productosFiltrados[i].rutaImagen;
+                        cargaPaginaProducto(tarjetas[i],products,productosFiltrados[i],".producto");
+                    });
+                    console.log(productosFiltrados[i].nombre);
+                }
+                let script1 =document.createElement("script")
+                script1.setAttribute("src","/Componentes/carrusel/js/script.js")
+                document.body.appendChild(script1)
+                let script2 =document.createElement("script")
+                script2.setAttribute("src","/Componentes/carrusel/js/swiper-bundle.min.js")
+                document.body.appendChild(script2)
+            });
+        }
+
         function loadTemplateToElement(fileName, obj, callback) {
 
             fetch(fileName).then((res) => {
