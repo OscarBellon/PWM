@@ -37,7 +37,8 @@
             <input type="text" id="mensaje" name="mensaje" class="mensajebox">
 
           </fieldset>
-          <button type="button" class="boton">Enviar</button>
+          <button type="button" class="boton" id="send">Enviar</button>
+          <p id="salida"></p>
         </form>
       </section>
     </main>
@@ -66,5 +67,41 @@
       loadTemplate("/Componentes/Header/header.html","header");
       loadTemplate("/Componentes/footer/footer.html","footer");
     }
+
+    const nombre = document.getElementById("nombre")
+    const correo = document.getElementById("correo")
+    const mensaje = document.getElementById("mensaje")
+    const salida = document.getElementById("salida")
+
+    send.addEventListener("click", e=>{
+      console.log("envio")
+      e.preventDefault()
+
+      let aviso = false
+      let warnings = ""
+      let mailchk = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/
+
+      if(nombre.value.length < 4){
+        warnings += `El nombre es demasiado corto <br>`
+        aviso = true
+      }       
+
+      if(!mailchk.test(correo.value)){
+        warnings += `El email no es válido <br>`
+        aviso = true
+      }
+
+      if(mensaje.value == ""){
+        warnings += `El mensaje está vacío <br>`
+        aviso = true
+      }
+
+      if(aviso){
+        salida.innerHTML = warnings
+      }else{
+        salida.innerHTML = "Mensaje enviado"
+      }
+    })
+
   </script>
 </html>
