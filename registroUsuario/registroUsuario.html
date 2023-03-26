@@ -21,23 +21,24 @@
         <heading class="subtitulo">
           <p class="contactanos">Registro de Usuario</p>
         </heading>
-        <form class="campos">
+        <form class="campos" id="form">
           <fieldset>
 
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre">
 
             <label for="telefono">Correo Electrónico:</label>
-            <input type="text" id="telefono" name="telefono">
-
-            <label for="correo">Contraseña:</label>
             <input type="text" id="correo" name="correo">
 
+            <label for="correo">Contraseña:</label>
+            <input type="password" id="pass" name="pass">
+
             <label for="mensaje">Confirmar contraseña:</label>
-            <input type="text" id="mensaje" name="mensaje" class="mensajebox">
+            <input type="password" id="cpass" name="cpass" class="mensajebox">
 
           </fieldset>
-          <button type="button" class="boton">Registrarse</button>
+          <button type="submit" class="boton" id="send">Registrarse</button>
+          <p id="feedback"></p>
         </form>
       </section>
     </main>
@@ -66,5 +67,46 @@
       loadTemplate("/Componentes/Header/header.html","header");
       loadTemplate("/Componentes/footer/footer.html","footer");
     }
+
+    const nombre = document.getElementById("nombre")
+    const correo = document.getElementById("correo")
+    const contraseña = document.getElementById("pass")
+    const confirmar = document.getElementById("cpass")
+    const salida = document.getElementById("feedback")
+
+    send.addEventListener("click", e=>{
+    console.log("envio")
+    e.preventDefault()
+
+    let aviso = false
+    let warnings = ""
+    let mailchk = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/
+
+    if(nombre.value.length < 4){
+      warnings += `El nombre es demasiado corto <br>`
+      aviso = true
+    }       
+
+    if(!mailchk.test(correo.value)){
+      warnings += `El email no es válido <br>`
+      aviso = true
+    }
+
+    if(contraseña.value.length < 6){
+      warnings += `La contraseña debe ser de 6 o más caracteres <br>`
+      aviso = true
+    }
+
+    if(contraseña.value != confirmar.value){
+      warnings += `Las contraseñas deben coincidir <br>`
+      aviso = true
+    }
+
+    if(aviso){
+      salida.innerHTML = warnings
+    }else{
+      salida.innerHTML = "Registrado con éxito"
+    }
+  })
   </script>
 </html>

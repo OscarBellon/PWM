@@ -24,15 +24,16 @@
         <form class="campos">
           <fieldset>
 
-            <label for="telefono">Correo Electrónico:</label>
-            <input type="text" id="telefono" name="telefono">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="telefono">
 
-            <label for="correo">Contraseña:</label>
-            <input type="text" id="correo" name="correo">
+            <label for="passs">Contraseña:</label>
+            <input type="password" id="pass" name="correo">
 
           </fieldset>
-          <button type="button" class="boton">Acceder</button>
-          <button type="button" class="boton">Registrarse</button>
+          <button type="button" class="boton" id="entrar">Acceder</button>
+          <button type="button" class="boton" href="/registroUsuario/registroUsuario.html">Registrarse</button>
+          <p id="salida"></p>
         </form>
       </section>
     </main>
@@ -61,5 +62,37 @@
       loadTemplate("/Componentes/Header/header.html","header");
       loadTemplate("/Componentes/footer/footer.html","footer");
     }
+
+    const nombre = document.getElementById("nombre")
+    const contraseña = document.getElementById("pass")
+    const salida = document.getElementById("salida")
+
+    entrar.addEventListener("click", e=>{
+      console.log("envio")
+      let warnings = ""
+      let entra = false
+
+      var archivo = new File([""], "usuarios.txt");
+      var lector = new FileReader();
+
+      lector.onload = function(evento) {
+
+        var contenido = evento.target.result;
+        var cadenaBuscada = nombre.value + ":" + contraseña.value
+        console.log(cadenaBuscada)
+        if (contenido.includes(cadenaBuscada)) {
+          entra = true
+          console.log("si")
+        }
+      };
+      lector.readAsText(archivo);
+
+      if(entra){
+        salida.innerHTML = "Acceso correcto"
+      }else{
+        salida.innerHTML = "Credenciales incorrectas"
+      }
+    })
+
   </script>
 </html>
