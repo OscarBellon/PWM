@@ -1,0 +1,80 @@
+body{
+    background: #f2f2f2;
+    margin: 0px;
+}
+main{
+    position: relative;
+}
+main{
+    width: 100%;
+}
+.box{
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+    
+    
+
+}
+.contenedorPortada{
+    grid-column: 1;
+    grid-row: 1;
+}
+.mapblock{
+    grid-row: 1;
+    grid-column: 3;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.portada{
+    height: auto;
+    max-height: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+.imagen{
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+p .description{
+    color: black !important;
+}
+
+.title{
+    grid-row: 2;
+    grid-column: 1/4;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 1000;
+}
+
+main div {
+    display: flex;
+    place-content: center;
+    padding: 5%;
+    margin: auto;
+}
+
+
+
+main{
+    z-index: -2;
+}
