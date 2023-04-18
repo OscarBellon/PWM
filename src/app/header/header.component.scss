@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    overflow-y: scroll;
-}
   
 @media only screen and (min-width:702px){
   
@@ -28,8 +22,8 @@ body {
     }
     
     .logo{
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
     }
   
     .topBarLinks{
@@ -98,15 +92,15 @@ body {
     }
     
     .logo{
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
     }
   
     .marco2Mobile{
       width: 100px; 
       height: 41px;
-      position: relative;
-      left: 205px;
+      position: absolute;
+      right: 0;
       background-color: #03738C;
     }
   

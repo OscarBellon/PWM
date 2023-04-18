@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { HomeComponent } from './home/home.component';
 
 //servicios
 import { CargaScriptService } from './carga-script.service';
@@ -17,7 +19,9 @@ import { CargaScriptService } from './carga-script.service';
     HeaderComponent,
     FooterComponent,
     ProductoComponent,
-    CarruselComponent
+    CarruselComponent,
+    QuienesSomosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
