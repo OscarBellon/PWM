@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 
+//servicios
+import { CargaScriptService } from './carga-script.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,9 @@ import { CarruselComponent } from './carrusel/carrusel.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CargaScriptService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
