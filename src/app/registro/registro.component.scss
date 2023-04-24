@@ -1,0 +1,48 @@
+#contTitle{
+    width: 100%;
+    height: auto;
+    background-color: #03738C;
+    padding: 10px;
+}
+#title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 0px;
+}
+
+#contSubtitle{
+    width: 65%;
+    height: auto;
+    background-color: #2E4052;
+    padding: 8px;
+    
+}
+
+#subtitle{
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0px;
+}
+
+form{
+    align-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-align: left;
+    margin-left: 15%;
+    margin-bottom: 3px;
+}
+input{
+    width: 70%;
+    border-radius: 5px;
+    background-color: #2E4052;
+    color: white;
+    align-self: center;
+}

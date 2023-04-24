@@ -15,6 +15,8 @@ import { CargaScriptService } from './carga-script.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductoPaginaComponent } from './producto-pagina/producto-pagina.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
+import { AccederComponent } from './acceder/acceder.component';
+import { RegistroComponent } from './registro/registro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
     QuienesSomosComponent,
     HomeComponent,
     ProductoPaginaComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    AccederComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
