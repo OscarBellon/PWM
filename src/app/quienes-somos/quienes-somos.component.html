@@ -1,12 +1,12 @@
-<header></header>
+
 <main>
-    <img id="banner" src="../resources/Banner.PNG"/>
+    <img id="banner" src="../assets/Banner.PNG"/>
     <div id="box">    
         <section id="quienesSomos">
             <div class="tarjetaSection"><p class="tituloSection">Section Title</p></div>
             <article>
                 <div id="contenedorDescripcion"><p id="descripcion"></p></div>
-                <img id="portada" src="../resources/Banner.PNG"/>
+                <img id="portada" src="../assets/Banner.PNG"/>
             </article>
         </section>
         
@@ -20,8 +20,8 @@
         <section id="marcas">
             <div class="tarjetaSection"><p class="tituloSection">Section Title</p></div>
             <div id="conjuntoMarcas">
-                <div class="contenedorMarca">
-                    <img class="imagen" src="#s"/>
+                <!--<div class="contenedorMarca">
+                    <img class="imagen" src="#"/>
                 </div>
                 
                 <div class="contenedorMarca">
@@ -29,10 +29,13 @@
                 </div>
                 <div class="contenedorMarca">
                     <img class="imagen" src="#"/>
+                </div>-->
+                <p>Hoooooooooooooooo</p>
+                <div class="contenedorMarca" *ngFor="let imagen of imagenes">
+                    <img class="imagen" src="{{ imagen.ruta }}"/>
                 </div>
             </div>
         </section>
     </div>
 </main>
-<footer></footer>
-<script src="./script.js"></script>
+

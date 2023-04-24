@@ -80,3 +80,17 @@ article{
     justify-content: space-around;
     align-items:center;
 }
+
+#conjuntoMarcas{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.contenedorMarca{
+    margin-top: 30px;
+    height: 3em;
+    width: 5em;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: 0.25px solid black !important;
+}

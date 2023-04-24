@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 //servicios
 import { CargaScriptService } from './carga-script.service';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,8 @@ import { CargaScriptService } from './carga-script.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     CargaScriptService
