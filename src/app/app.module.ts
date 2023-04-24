@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 //servicios
 import { CargaScriptService } from './carga-script.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductoPaginaComponent } from './producto-pagina/producto-pagina.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProductoComponent,
     CarruselComponent,
     QuienesSomosComponent,
-    HomeComponent
+    HomeComponent,
+    ProductoPaginaComponent,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule,
