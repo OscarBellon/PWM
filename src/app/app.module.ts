@@ -17,6 +17,7 @@ import { ProductoPaginaComponent } from './producto-pagina/producto-pagina.compo
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { AccederComponent } from './acceder/acceder.component';
 import { RegistroComponent } from './registro/registro.component';
+import { DataServices } from './data.services';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { RegistroComponent } from './registro/registro.component';
     HttpClientModule
   ],
   providers: [
-    CargaScriptService
+    CargaScriptService,
+    DataServices
   ],
   bootstrap: [AppComponent]
 })
