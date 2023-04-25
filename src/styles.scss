@@ -5,4 +5,27 @@ body {
     overflow-y: scroll;
     background-image: url("assets/Fomdo.jpg");
     background-size: 100vw 100vh;
+    min-height: 100%;
 }
+
+
+
+body, app-root{
+    display:list-item;
+    min-height: 100vh ;
+}
+
+.mainContent{
+    display:list-item;
+    min-height: 100%;
+    margin-bottom: 68px;
+}
+app-footer{
+    height: 68px;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+}
+
+
+

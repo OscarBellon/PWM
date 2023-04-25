@@ -1,11 +1,7 @@
 $azul1:#03738c;
 $azul2:#2E4052;
 $blanco1:#d9d9d9;
-:root {
-    --azul1:#03738c;
-    --azul2:#2E4052;
-    --blanco1:#d9d9d9;
-  }
+
   
   body {
     margin: 0px;
@@ -18,8 +14,6 @@ $blanco1:#d9d9d9;
   }
   
   #footerDiv {
-    position: absolute;
-    bottom: 0px;
     background: $azul1;
     width: 100%;
     margin: 0px;
