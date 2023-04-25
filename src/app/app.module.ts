@@ -17,6 +17,7 @@ import { ProductoPaginaComponent } from './producto-pagina/producto-pagina.compo
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { AccederComponent } from './acceder/acceder.component';
 import { RegistroComponent } from './registro/registro.component';
+
 @NgModule({
   declarations: [
     AppComponent,
