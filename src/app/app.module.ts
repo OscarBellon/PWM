@@ -18,6 +18,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { AccederComponent } from './acceder/acceder.component';
 import { RegistroComponent } from './registro/registro.component';
 import { DataServices } from './data.services';
+import { ContactanosComponent } from './contactanos/contactanos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DataServices } from './data.services';
     ProductoPaginaComponent,
     CatalogoComponent,
     AccederComponent,
-    RegistroComponent
+    RegistroComponent,
+    ContactanosComponent
   ],
   imports: [
     BrowserModule,
