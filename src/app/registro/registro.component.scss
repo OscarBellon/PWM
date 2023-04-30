@@ -51,13 +51,13 @@ label{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     max-width: 800px;
-    margin-bottom: 2em;
+    margin-bottom: 0px;
     justify-content: center;
     background-color: #03738C;
 
     //margin-left: 60px;
 }
-input{
+#nombre{
     width: 100%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -68,6 +68,19 @@ input{
     color: white;
     //align-self: center;
 }
+
+.form-control{
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 800px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2E4052;
+    color: white;
+    //align-self: center;
+}
+
 .Campo{
     width: 70%;
     max-width: 800px;
@@ -76,6 +89,8 @@ input{
 #registra{
     width: 100%;
     max-width: 8em;
+    background-color: #2E4052;
+    color: white;
     transform: translate(0%, -15%);
 }
 #boton{
@@ -83,5 +98,14 @@ input{
     max-width: 8em;
     align-self: center;
     border-radius: 5px;
+    margin-top: 2em;
     //height: 50px;
+}
+
+.errores{
+    width: 70%;
+    max-width: 800px;
+    align-self: center;
+    color: rgb(209, 5, 5);
+    margin-bottom: 0px;
 }

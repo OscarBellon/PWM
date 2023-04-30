@@ -19,7 +19,10 @@ import { AccederComponent } from './acceder/acceder.component';
 import { RegistroComponent } from './registro/registro.component';
 import { DataServices } from './data.services';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,10 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [
     CargaScriptService,
