@@ -8,21 +8,25 @@ body {
     min-height: 100%;
 }
 
-
-
-body, app-root{
+html,body{
+    height: 100%;
+}
+main{
+    display: list-item;
+    min-height: 100%;
+    margin-top: 0px;
+}
+ app-root{
     display:list-item;
-    min-height: 100vh ;
+    min-height: 100% ;
 }
 
 .mainContent{
     display:list-item;
-    min-height: 100%;
-    margin-bottom: 68px;
+    min-height: calc(100vh - 68px - 44px);
 }
 app-footer{
     height: 68px;
-    position: absolute;
     bottom: 0px;
     width: 100vw;
 }
