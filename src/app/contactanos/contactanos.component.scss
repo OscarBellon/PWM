@@ -51,13 +51,26 @@ label{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     max-width: 800px;
-    margin-bottom: 0px;
+    margin-bottom: 2em;
     justify-content: center;
     background-color: #03738C;
 
     //margin-left: 60px;
 }
-#nombre{
+#inputext{
+    display: flex;
+    align-self: center;
+    padding-right: 30px;
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 800px;
+    margin-bottom: 2em;
+    justify-content: center;
+    height: 150px;
+    background-color: #03738C;
+}
+input{
     width: 100%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -69,7 +82,7 @@ label{
     //align-self: center;
 }
 
-.form-control{
+textarea{
     width: 100%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -78,19 +91,16 @@ label{
     border-bottom-left-radius: 5px;
     background-color: #2E4052;
     color: white;
-    //align-self: center;
+    resize: none;
 }
-
 .Campo{
     width: 70%;
     max-width: 800px;
     align-self: center;
 }
-#registra{
+#enviar{
     width: 100%;
     max-width: 8em;
-    background-color: #2E4052;
-    color: white;
     transform: translate(0%, -15%);
 }
 #boton{
@@ -98,14 +108,5 @@ label{
     max-width: 8em;
     align-self: center;
     border-radius: 5px;
-    margin-top: 2em;
     //height: 50px;
-}
-
-.errores{
-    width: 70%;
-    max-width: 800px;
-    align-self: center;
-    color: rgb(209, 5, 5);
-    margin-bottom: 0px;
 }
