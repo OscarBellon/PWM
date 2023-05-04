@@ -14,6 +14,8 @@ $gris:#f2f2f2;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
     
 }
 
@@ -40,7 +42,7 @@ $gris:#f2f2f2;
 .precio{
     font-size:x-small;
     margin-top: 0px;
-    padding-bottom: 30px;
+    padding-bottom: 12px;
 }
 
 .disponibilidad{

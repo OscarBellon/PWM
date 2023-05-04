@@ -1,19 +1,28 @@
 <div class="container  my-3">
     <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
         <div class="carousel-inner w-100" role="listbox">
+           
+            
+             
+            <div class="carousel-item" *ngFor="let product of productsFiltered" >
+                <div class="col-md-4">
+                    <div class="card card-body ">
+                        <app-producto class="mx-auto" [product]="product" *ngIf="product != productsFiltered[0]"></app-producto>
+                    </div>
+                </div>
+            </div>
             <div class="carousel-item active">
                 <div class="col-md-4">
                     <div class="card card-body ">
-                        <app-producto class="mx-auto"></app-producto>
-                        1
+                        <app-producto class="mx-auto" [product]="productsFiltered[0]"></app-producto>
                     </div>
                 </div>
             </div>
+            <!--
             <div class="carousel-item">
                 <div class="col-md-4">
                     <div class="card card-body">
                         <app-producto class="mx-auto"></app-producto>
-                        2
                     </div>
                 </div>
             </div>
@@ -21,7 +30,6 @@
                 <div class="col-md-4">
                     <div class="card card-body ">
                         <app-producto class="mx-auto"></app-producto>
-                        3
                     </div>
                 </div>
             </div>
@@ -46,6 +54,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
         <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>

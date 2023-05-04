@@ -5,6 +5,7 @@ import { AccederComponent } from './acceder/acceder.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ProductoPaginaComponent } from './producto-pagina/producto-pagina.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:'acceder', component: AccederComponent},
   {path:'registro', component: RegistroComponent},
   {path:'catalogo', component: CatalogoComponent},
+  {path:'producto/:nombre/:disponibilidad/:oferta/:seccion/:rutaImagen/:precio/:id', component: ProductoPaginaComponent},
   {path:'**', component: HomeComponent},
+  
 ];
 
 @NgModule({

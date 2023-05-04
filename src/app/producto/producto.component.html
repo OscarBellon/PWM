@@ -1,17 +1,17 @@
 <article class="productoPrincipal">
     <div class="wrapper">
         <div class="wrapperProducto">
-            <a href="#">
-                 <img src="../resources/IMAGEN.png" alt="" class="producto">
+            <a [routerLink]="['/producto/',product.nombre,product.disponibilidad,product.oferta,product.seccion,product.rutaImagen,product.precio,product.id]" routerLinkActive="active-link">
+                 <img src={{rutaImg}} alt="" class="producto">
             </a>
-           
         </div>
         <div class="grid-container">
-                <h2 class="nombreProducto">Producto</h2>
-                <h3 class="precio">precio</h3>
+                <h2 class="nombreProducto">{{product.nombre}}</h2>
+                <h3 class="precio">{{product.precio}}</h3>
                 <div class="disponibilidad">
                     disponibilidad
-                    <div class="circulo"></div>
+                    <div class="circulo" *ngIf="product.disponibilidad"></div>
+                    <div class="circulo" *ngIf="!product.disponibilidad" style="background: lightcoral !important;"></div>
                 </div> 
         </div>
     </div>
