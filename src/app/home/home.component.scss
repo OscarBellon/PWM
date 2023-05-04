@@ -82,3 +82,20 @@
         font-size: 18px;
     }
   }
+
+  @media (max-width: 650px){
+    .titulo{
+      font-size: 26px;
+      padding-left: 0;
+    }
+    .subtitulo{
+      font-size: 12px;
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 400px){
+    .foto{
+      display: none;
+    }
+  }
