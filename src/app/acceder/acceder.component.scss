@@ -51,7 +51,7 @@ label{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     max-width: 800px;
-    margin-bottom: 2em;
+    margin-bottom: 0em;
     justify-content: center;
     background-color: #03738C;
 
@@ -82,6 +82,8 @@ input{
     width: 100%;
     max-width: 8em;
     transform: translate(0%, -15%);
+    background-color: #2E4052;
+    color: white;
 }
 
 #botones{
@@ -97,4 +99,12 @@ input{
     align-self: center;
     border-radius: 5px;
     //height: 50px;
+}
+
+.errores{
+    width: 70%;
+    max-width: 800px;
+    align-self: center;
+    color: rgb(209, 5, 5);
+    margin-bottom: 0px;
 }
