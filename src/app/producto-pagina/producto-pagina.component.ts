@@ -13,6 +13,7 @@ interface Producto{
   seccion:string;
   id:string;
   rutaImgUrl:String;
+  detalle:string
 }
 @Component({
   selector: 'app-producto-pagina',
@@ -20,7 +21,7 @@ interface Producto{
   styleUrls: ['./producto-pagina.component.scss']
 })
 export class ProductoPaginaComponent implements OnChanges, OnInit {
-  product: Producto={nombre: "",precio:0,disponibilidad:true,rutaImagen:"",oferta:false,seccion:"",id:"",rutaImgUrl:""}
+  product: Producto={nombre: "",precio:0,disponibilidad:true,rutaImagen:"",oferta:false,seccion:"",id:"",rutaImgUrl:"", detalle:""}
   imgurl: String = ""
   productsFiltered: Producto[]=[];
   constructor(private _Activatedroute:ActivatedRoute,private storage: StorageService, private db: ProductsService, private _carga:CargaScriptService ) {
@@ -29,6 +30,7 @@ export class ProductoPaginaComponent implements OnChanges, OnInit {
       this.product.disponibilidad=params["disponibilidad"];
       this.product.rutaImagen=params["rutaImagen"];
       this.product.seccion=params["seccion"];
+      this.product.detalle=params["detalle"];
     });
     this.imageDownload();
     this.getRelatedProducts(this.product.seccion)

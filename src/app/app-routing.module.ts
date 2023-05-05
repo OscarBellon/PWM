@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'acceder', component: AccederComponent},
   {path:'registro', component: RegistroComponent},
   {path:'catalogo', component: CatalogoComponent},
-  {path:'producto/:nombre/:disponibilidad/:oferta/:seccion/:rutaImagen/:precio/:id', component: ProductoPaginaComponent},
+  {path:'producto/:nombre/:disponibilidad/:oferta/:seccion/:rutaImagen/:precio/:id/:detalle', component: ProductoPaginaComponent},
   {path:'**', component: HomeComponent},
   
 ];
