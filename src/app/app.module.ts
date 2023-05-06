@@ -26,6 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import {IvyCarouselModule} from 'angular-responsive-carousel3';
+
+  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +54,8 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';
     provideAuth(() => getAuth()),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    IvyCarouselModule
 
   ],
   providers: [

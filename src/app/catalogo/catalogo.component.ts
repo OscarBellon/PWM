@@ -8,6 +8,8 @@ interface Producto{
   oferta:boolean;
   seccion:string;
   id:string;
+  detalle: string;
+
 }
 @Component({
   selector: 'app-catalogo',

@@ -10,6 +10,7 @@ interface Producto{
   oferta:boolean;
   seccion:string;
   id: string;
+  detalle:string;
 }
 @Component({
   selector: 'app-producto',
@@ -38,5 +39,7 @@ export class ProductoComponent implements OnChanges,OnInit{
   }
   async image(){
     this.rutaImg=await this.storage.getProductImageURL(this.product.rutaImagen);
+    this._carga.Carga("assets/carrusel.js")
+      this._carga.Carga("https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js")
   }
 }

@@ -10,6 +10,7 @@ interface Producto{
   oferta:boolean;
   seccion:string;
   id: string;
+  detalle:string;
 }
 @Component({
   selector: 'app-carrusel',
@@ -20,6 +21,8 @@ interface Producto{
 
 
 export class CarruselComponent implements OnChanges, OnInit {
+
+  
   @Input() productsFiltered: Producto[]=[];
   constructor(private _carga:CargaScriptService){
     //_carga.Carga("assets/carrusel.js");

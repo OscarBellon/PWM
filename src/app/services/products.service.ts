@@ -28,4 +28,13 @@ export class ProductsService {
       .subscribe(productosFiltrados=>resolve(productosFiltrados));
     })
   }
+
+  getProductsByOferta(){
+    return new Promise<any>((resolve)=>{
+      this.db.collection("productos", ref=>
+      ref.where("oferta","==",true))
+      .valueChanges()
+      .subscribe(productosFiltrados=>resolve(productosFiltrados));
+    })
+  }
 }
