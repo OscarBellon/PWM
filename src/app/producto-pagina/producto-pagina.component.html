@@ -13,7 +13,11 @@
             <div class="envoltorio">
             <div class="fila">
             <h2 class="precio">{{product.precio}}</h2>
-            <div class="disponibilidad">Disponibilidad<div class="circulo"></div></div>
+            <div class="disponibilidad">Disponibilidad
+                <div class="circulo" *ngIf="obs | async"> </div>
+                <div class="circulo" *ngIf="!(obs | async)" style="background: lightcoral !important;"> </div>
+            </div>
+            
             </div></div>
         </section>
     </article>
