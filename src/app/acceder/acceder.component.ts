@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { from } from 'rxjs';
 import UserService from '../services/user.services';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-acceder',
@@ -15,7 +16,8 @@ export class AccederComponent implements OnInit{
   constructor(
     private userService: UserService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    
   ){
     this.formLogin = this.fb.group({
       email: new FormControl('',[Validators.required, Validators.email]),
@@ -31,6 +33,7 @@ export class AccederComponent implements OnInit{
     this.userService.login(this.formLogin.value)
       .then(response => {
         console.log(response);
+        this.userService.activo = true;
         alert("Acceso completado");
         this.router.navigate(['/home']);
       })
