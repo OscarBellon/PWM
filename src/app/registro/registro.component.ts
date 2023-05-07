@@ -3,6 +3,7 @@ import UserService from '../services/user.services';
 import { FormGroup, FormBuilder, FormControl, ValidatorFn, AbstractControl, Validators } from '@angular/forms';
 //import { CustomValidators } from './CustomValidators';
 import { validarQueSeanIguales } from './CustomValidators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -14,9 +15,10 @@ export class RegistroComponent implements OnInit{
 
   constructor(@Inject(UserService)
     private userService: UserService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {this.formReg = this.fb.group({
-    name: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+    name: new FormControl('', [Validators.required, Validators.pattern('[a-zA-ZáãäéëêíîóöúüñÑçÁÉÍÓÚ ]*')]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [ 
       Validators.required,
@@ -36,7 +38,10 @@ export class RegistroComponent implements OnInit{
       return;
     }
     this.userService.register(this.formReg.value)
-      .then()
+      .then(response => {
+        alert("Registro completado");
+        this.router.navigate(['/acceder']);
+      })
       .catch((error: Error) => console.log(error));
   }
 }

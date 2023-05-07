@@ -8,7 +8,8 @@
         <li><a routerLink="/quienesSomos" routerLinkActive="active-link">Nosotros</a></li>
         <li><a routerLink="/catalogo" routerLinkActive="active-link">Catálogo</a></li>
         <div class="marco2">
-          <li><a routerLink="/acceder" routerLinkActive="active-link" class="Acceder">Acceder</a></li>
+          <li *ngIf="state === false"><a routerLink="/acceder" routerLinkActive="active-link" class="Acceder">Acceder</a></li>
+          <li *ngIf="state"><a (click)="logOut()" routerLink="#" routerLinkActive="active-link" class="Acceder"> {{ dataUser }}</a></li>
         </div>
       </ul>
     </div>
