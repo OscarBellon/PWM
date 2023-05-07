@@ -28,17 +28,18 @@ export class HomeComponent implements OnInit{
   constructor(private db: ProductsService) { }
 
   ngOnInit(): void {
-  
+    this.getOferts();
+    this.getAll();
 
   }
 
-  async imageDownload (){
-    this.todos = await this.db.getAllProducts;
+  async getAll (){
+    this.todos = await this.db.getAllProducts();
   }
   
 
   async getOferts(){
-    this.filtrados = await this.db.getProductsByOferta
+    this.filtrados = await this.db.getProductsByOferta();
   }
 
 }
